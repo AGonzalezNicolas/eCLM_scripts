@@ -74,7 +74,7 @@ file3 = '../EU_CORDEX_4N/timing/model_timing.000'
 file4 = '../EU_CORDEX_8N/timing/model_timing.0000'
 
 files = [file0, file1, file2, file3, file4]              # List of files to process 
-cores = [64, 128, 256, 516, 1032]  # Manually provided number of cores for each file
+cores = [64, 128, 256, 512, 1024]  # Manually provided number of cores for each file
 patterns = ["CPL:INIT", "CPL:RUN_LOOP_BSTART", "CPL:RUN_LOOP", "CPL:TPROF_WRITE", "CPL:RUN_LOOP_BSTOP","CPL:FINAL", "sync3_tprof", ]   # Add more patterns as needed
 
 output_csv = "Output_times.csv"  # Output CSV filename

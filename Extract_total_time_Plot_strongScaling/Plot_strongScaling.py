@@ -36,16 +36,20 @@ plt.plot(num_cores, speedup, "o-", label="Speedup", color="black", markersize=6)
 # Plot ideal speedup (dashed line) also in black
 plt.plot(num_cores, ideal_speedup, "--", label="Ideal Speedup", color="black")
 
+
 # Labels and title
 plt.xlabel("Number of Cores", fontsize=14)
 plt.ylabel("Speedup", fontsize=14)
 plt.title("eCLM Speedup vs. Number of Cores", fontsize=16)                ## Change title
 
 # Formatting
-plt.xticks(fontsize=12)
-plt.yticks(fontsize=12)
+plt.xscale("log")
+plt.yscale("log")
+plt.xticks(num_cores, [int(nc) for nc in num_cores],fontsize=12)
+plt.yticks(ideal_speedup, [int(isp) for isp in ideal_speedup],fontsize=12)
 plt.legend(fontsize=12)
 plt.grid(True, linestyle="--", linewidth=0.5, color="gray")
+
 
 # Save and show plot
 plt.savefig("eCLM_strong_scaling_plot.png", dpi=300, bbox_inches="tight")  ## Change figure name
