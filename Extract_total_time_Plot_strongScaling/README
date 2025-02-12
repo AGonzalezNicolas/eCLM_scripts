@@ -10,7 +10,7 @@
    - "patterns": Keywords (names of times) to look up in "files" (in model_timing.*)
    - "output_csv": name of the output file (e.g. Output_times.csv)
 
-3) Plot_times_v2.py
+3) Plot_strongScaling.py
    This script extracts data (number of cores and total time) from a "csv" file and plots speedup (measured and ideal) versus the number of cores.
    
    Provide:
