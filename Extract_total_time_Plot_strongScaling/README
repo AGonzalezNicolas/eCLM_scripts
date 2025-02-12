@@ -1,0 +1,19 @@
+1) run_python.in
+   First, source run_python.in
+
+2) Extract_times_eCLM_v2.py
+   This script extracts data from "model_timing.*" (timing file from eCLM) and saves times, total time and number of cores into a "csv" file.
+   
+   Provide:
+   - "files": Path and name to model_timing file (or files)
+   - "cores": Number of cores used for each "files"
+   - "patterns": Keywords (names of times) to look up in "files" (in model_timing.*)
+   - "output_csv": name of the output file (e.g. Output_times.csv)
+
+3) Plot_times_v2.py
+   This script extracts data (number of cores and total time) from a "csv" file and plots speedup (measured and ideal) versus the number of cores.
+   
+   Provide:
+   - "input_csv" = name of the csv file to read (e.g. Output_times.csv)
+   - Modify "title" in ## Change title
+   - Modify figure name in ## Change figure name
